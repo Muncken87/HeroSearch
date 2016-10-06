@@ -1,23 +1,20 @@
 
-<ion-pane>
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Awesome App</h1>
-    </ion-header-bar>
-
+<ion-pane class="container">
     <ion-pane  ng-controller="ListCtrl">
-      <input type="text" ng-model="search" placeholder="Search">
-      <ion-list class="container">
+      <ion-list>
         <div class="row">
-        <ion-item ng-repeat="champ in data | filter:search" class="col col-md-4">
-          <!-- <div class="image" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/6.19.1/img/sprite/{{champ.image.sprite}}');background-position: -{{champ.image.x}}px -{{champ.image.y}}px; no-repeat;"></div> -->
+          <h1 class="title">Awesome App</h1>
+          <input type="text" ng-model="search" placeholder="Search" class="form-control">
+          <ion-item ng-repeat="champ in data | filter:search" class="col col-md-4">
             <!-- <div class="image" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/6.19.1/img/sprite/{{champ.image.sprite}}');background-position: -{{champ.image.x}}px -{{champ.image.y}}px; no-repeat;"></div> -->
-          <div class="champ-splash" style="background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_0.jpg')"></div>
-          <div class="champ-stats">
-            <h2 class="champ-name">{{champ.name}}</h2>
-            <p class="champ-name">{{champ.stats.hp}}</p>
-          </div>
-        </ion-item>
-      </div> <!-- end row -->
+              <!-- <div class="image" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/6.19.1/img/sprite/{{champ.image.sprite}}');background-position: -{{champ.image.x}}px -{{champ.image.y}}px; no-repeat;"></div> -->
+            <div class="champ-splash" style="background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_0.jpg')"></div>
+            <div class="champ-stats">
+              <h2 class="champ-name">{{champ.name}}</h2>
+              <p class="champ-name">{{champ.stats.hp}}</p>
+            </div>
+          </ion-item>
+        </div> <!-- end row -->
       </ion-list>
     </ion-content>
   </ion-pane>
